@@ -1,0 +1,17 @@
+services:
+  vscode:
+    build: .
+    container_name: vscode-code-server
+    ports:
+      - "8080:8080"
+    environment:
+      - PASSWORD=change-me
+    volumes:
+      - ~/source:/workspace        # ✅ your local folder on host
+      - vscode-data:/home/coder/.local/share/code-server
+    restart: unless-stopped
+    user: "1000:1000"
+
+volumes:
+  vscode-data:
+

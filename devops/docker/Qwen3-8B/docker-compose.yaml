@@ -1,0 +1,43 @@
+# compose.yaml
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
+    # Bind the model; injects OPENAI_API_BASE_URL + OPENAI_MODEL_NAME into this service
+    models:
+      qwen3:
+        endpoint_var: OPENAI_API_BASE_URL
+        model_var: OPENAI_MODEL_NAME
+    environment:
+      - OPENAI_API_KEY=none
+      # If your runner serves under /v1, you can append it like this instead:
+      # - OPENAI_API_BASE_URL=${OPENAI_API_BASE_URL}/v1
+    restart: unless-stopped
+
+  cli:
+    image: curlimages/curl:8.10.1
+    models:
+      - qwen3             # short syntax injects LLM_URL + LLM_MODEL
+    command: >
+      sh -c '
+        echo "Waiting for model..." && sleep 6 &&
+        echo "Hitting $LLM_URL/chat/completions" &&
+        curl -s "$LLM_URL/chat/completions" \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer none" \
+          -d "{\"model\":\"$LLM_MODEL\",\"messages\":[{\"role\":\"user\",\"content\":\"One line about Qwen3-8B.\"}]}";
+        tail -f /dev/null
+      '
+
+models:
+  qwen3:
+    model: ai/qwen3:8B-Q4_K_M
+    context_size: 4096
+    runtime_flags:
+      - "--temp"
+      - "0.7"
+      - "--top-p"
+      - "0.9"
+

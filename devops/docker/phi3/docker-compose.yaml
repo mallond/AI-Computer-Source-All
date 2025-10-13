@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: vllm
+    ports:
+      - "8000:8000"                # OpenAI-compatible endpoint at /v1
+    environment:
+      # Optional if the model requires accepting a license or gated access
+      # - HUGGING_FACE_HUB_TOKEN=${HUGGING_FACE_HUB_TOKEN}
+      - VLLM_WORKER_THREADS=1
+    command: >
+      python -m vllm.entrypoints.openai.api_server
+      --model microsoft/Phi-3-mini-4k-instruct
+      --trust-remote-code
+      --max-model-len 4096
+      --port 8000
+      --gpu-memory-utilization 0.85
+      --dtype bfloat16
+    shm_size: "1g"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  # Optional: simple web UI that talks to an OpenAI-compatible backend
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    depends_on: [vllm]
+    environment:
+      - OPENAI_API_BASE_URL=http://vllm:8000/v1
+      - OPENAI_API_KEY=sk-anything        # WebUI needs a value; vLLM ignores it
+    ports:
+      - "3000:8080"
+    restart: unless-stopped
+
