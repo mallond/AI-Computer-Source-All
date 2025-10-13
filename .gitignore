@@ -1,1 +1,12 @@
 devops/docker/gemma3-4b-it-tgi/secret
+.env*
+*.pem
+*.key
+*.p12
+id_*
+.ssh/
+*.crt
+config.local.*
+secret
+*.enc
+
