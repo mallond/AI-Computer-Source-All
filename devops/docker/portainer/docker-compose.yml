@@ -1,0 +1,16 @@
+services:
+  portainer:
+    image: portainer/portainer-ee:lts
+    # Or build from the local Dockerfile:
+    # build: .
+    container_name: portainer
+    restart: always
+    ports:
+      - "8000:8000"
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${HOST_DATA_PATH:-${HOME}/source/data/portainer}:/data portainer/portainer-ee:lts
+
+volumes:
+  portainer_data:
