@@ -1,4 +1,5 @@
 # Tiny WASM, Army of One
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/06d7b9d7-2e20-4d00-a512-a6b1ca95bcd2" />
 
 ## Intro — The Pitch
 
