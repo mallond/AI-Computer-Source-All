@@ -35,7 +35,7 @@ This repo is about **outcomes**: faster pages, safer runtimes, and **dramaticall
 
 # Fly Paper Fly.io
 
-<img width="748" height="512" alt="image" src="https://github.com/user-attachments/assets/818bd168-9c42-4181-8c49-2e4e7d163920" />
+<img width="559" height="384" alt="image" src="https://github.com/user-attachments/assets/818bd168-9c42-4181-8c49-2e4e7d163920" />
 
 
 In the cloudbound city of Fly, apps are born inside Firecracker thimbles—tiny ironclad microVMs lit with dragonfire. Each thimble is its own keep: walls of hardware magic keep travelers separate, so no sorcery bleeds between rooms. Smiths allot a whole hammer to a single thimble—one core per craft—so no forge steals another’s strike. These keeps perch on hulking sky-beasts with 8–32 hearts and 32–256 goblets of memory, and yet each thimble feels alone and safe.
@@ -48,7 +48,7 @@ Thus the city hums: tiny keeps, mighty beasts, heralded names, courteous sentine
 
 # Cargo Cult (but it’s not witchcraft) - it's RUST
 
-<img width="748" height="512" alt="image" src="https://github.com/user-attachments/assets/69bd057a-aa7e-4077-a0ab-6abf5a4937ff" />
+<img width="559" height="384" alt="image" src="https://github.com/user-attachments/assets/69bd057a-aa7e-4077-a0ab-6abf5a4937ff" />
 
 They called it a cult because the newcomers kept smiling at compiler errors. But the truth was simpler: Rust just had rules that worked.
 
