@@ -46,4 +46,16 @@ For beneath the cobbles runs WireGuard: a lattice of moonlit tunnels binding dis
 
 Thus the city hums: tiny keeps, mighty beasts, heralded names, courteous sentinels, and silent tunnels—each piece simple, together enchanted—so your work can fly.
 
+Cargo Cult (but it’s not witchcraft)
+
+They called it a cult because the newcomers kept smiling at compiler errors. But the truth was simpler: Rust just had rules that worked.
+
+Cargo rolled in like a clean supply chain—cargo new, cargo check, cargo run—containers sealed, provenance clear. Crates snapped together with semver discipline; features toggled like precise circuit breakers. Ownership wasn’t mysticism, it was logistics: who holds the box, who hands it off, when the pallet gets recycled. Lifetimes were shipping labels, not spells—so nothing got lost in transit.
+
+Traits gave interfaces a steel frame. Enums mapped the state space so there were no trapdoors, only documented branches. Pattern matching turned edge cases into checklists. And when threads spun up, Send + Sync signed the safety forms before anything moved. No runtime janitor, no GC chase—just zero-cost abstractions that read like poetry and run like C.
+
+The borrow checker was a tough foreman, sure, but fair: “Prove it’s safe, and we go faster.” Prove it, and release mode sings—LLVM polishing the last microns off the parts, async tasks flowing like a well-tuned conveyor.
+
+By dusk, the build light turns green, and everyone nods—not a miracle, just engineering that keeps its promises. Rust doesn’t ask for faith. It hands you a manifest, a checklist, and the keys. Gotta love it.
+
 
