@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for ai-computer-source-all on 2025-10-15T15:50:46Z
+# fly.toml app configuration file generated for ai-computer-source-all on 2025-10-15T20:14:24Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -9,7 +9,7 @@ primary_region = 'iad'
 [build]
 
 [http_service]
-  internal_port = 8080
+  internal_port = 8090
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
