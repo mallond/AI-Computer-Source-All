@@ -1,1 +1,172 @@
-good okay?
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forbidden</title>
+  <style>
+    :root {
+      --bg-1: #05060a;
+      --bg-2: #0b0f17;
+      --neon-1: #00eaff;
+      --neon-2: #ff00e6;
+      --neon-3: #9eff00;
+    }
+
+    /* Reset + layout */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(1200px 600px at 80% 20%, rgba(255,0,230,0.06), transparent 60%),
+        radial-gradient(900px 500px at 20% 80%, rgba(0,234,255,0.06), transparent 60%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      color: #e6f7ff;
+      overflow: hidden;
+    }
+
+    /* Subtle scanlines */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 1px,
+        transparent 2px,
+        transparent 3px
+      );
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    /* Vignette */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(60% 60% at 50% 50%, transparent 0%, rgba(0,0,0,0.35) 100%);
+      pointer-events: none;
+    }
+
+    .wrap {
+      position: relative;
+      padding: 2rem 3rem;
+      border: 1px solid rgba(0,234,255,0.25);
+      border-radius: 18px;
+      backdrop-filter: blur(3px) saturate(120%);
+      background: linear-gradient( to bottom right,
+        rgba(0,234,255,0.06), rgba(255,0,230,0.05));
+      box-shadow:
+        0 0 20px rgba(0,234,255,0.15),
+        inset 0 0 20px rgba(255,0,230,0.08);
+    }
+
+    /* Corner accents */
+    .wrap::before, .wrap::after {
+      content: "";
+      position: absolute;
+      width: 38px; height: 38px;
+      border: 2px solid var(--neon-1);
+      filter: drop-shadow(0 0 8px rgba(0,234,255,0.6));
+    }
+    .wrap::before { left: -10px; top: -10px; border-right: none; border-bottom: none; }
+    .wrap::after  { right: -10px; bottom: -10px; border-left: none; border-top: none; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 7rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+      /* Neon glow stack */
+      text-shadow:
+        0 0 6px  rgba(0,234,255,0.9),
+        0 0 12px rgba(0,234,255,0.6),
+        0 0 24px rgba(255,0,230,0.5),
+        0 0 48px rgba(255,0,230,0.35);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    /* Glitch layers */
+    h1::before, h1::after {
+      content: "FORBIDDEN";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      clip-path: inset(0 0 0 0);
+    }
+    h1::before {
+      left: -2px;
+      text-shadow:
+        -2px 0 var(--neon-2),
+        0 0 10px rgba(255,0,230,0.7);
+      animation: glitchX 1.8s infinite linear alternate-reverse;
+    }
+    h1::after {
+      left: 2px;
+      text-shadow:
+        2px 0 var(--neon-3),
+        0 0 10px rgba(158,255,0,0.7);
+      animation: glitchY 2.1s infinite linear alternate-reverse;
+    }
+
+    /* Small flicker bar */
+    .bar {
+      height: 3px;
+      margin-top: 1rem;
+      background: linear-gradient(90deg,
+        transparent, var(--neon-1), var(--neon-2), transparent);
+      box-shadow:
+        0 0 12px rgba(0,234,255,0.6),
+        0 0 24px rgba(255,0,230,0.4);
+      animation: sweep 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translateZ(0) scale(1); filter: brightness(1); }
+      50%      { transform: translateZ(0) scale(1.02); filter: brightness(1.15); }
+    }
+
+    @keyframes glitchX {
+      0%   { clip-path: inset(0 0 80% 0); transform: translateX(0); }
+      10%  { clip-path: inset(10% 0 65% 0); transform: translateX(-1px); }
+      20%  { clip-path: inset(85% 0 0 0); transform: translateX(1px); }
+      30%  { clip-path: inset(40% 0 40% 0); transform: translateX(-2px); }
+      40%  { clip-path: inset(0 0 70% 0); transform: translateX(2px); }
+      50%  { clip-path: inset(60% 0 20% 0); transform: translateX(-1px); }
+      60%  { clip-path: inset(0 0 80% 0); transform: translateX(1px); }
+      70%  { clip-path: inset(20% 0 60% 0); transform: translateX(-2px); }
+      80%  { clip-path: inset(75% 0 5% 0); transform: translateX(2px); }
+      90%  { clip-path: inset(0 0 90% 0); transform: translateX(-1px); }
+      100% { clip-path: inset(50% 0 30% 0); transform: translateX(0); }
+    }
+
+    @keyframes glitchY {
+      0%   { transform: translateY(0); }
+      20%  { transform: translateY(-1px); }
+      40%  { transform: translateY(1px); }
+      60%  { transform: translateY(-2px); }
+      80%  { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes sweep {
+      0%, 100% { opacity: 0.65; filter: blur(0.3px); }
+      50%      { opacity: 1;    filter: blur(0.8px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" aria-label="Forbidden container">
+    <h1 aria-live="polite" aria-label="Forbidden">FORBIDDEN</h1>
+    <div class="bar" aria-hidden="true"></div>
+  </div>
+</body>
+</html>
+

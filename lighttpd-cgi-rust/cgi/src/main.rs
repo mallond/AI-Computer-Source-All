@@ -23,5 +23,5 @@ fn get_query() -> HashMap<String, String> {
 fn main() {
     println!("Content-Type: text/plain\n");
     let query = get_query();
-    println!("{:#?}", query.into_iter());
+    println!("Hello Motto. {:#?}", query.into_iter());
 }
