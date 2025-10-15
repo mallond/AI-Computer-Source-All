@@ -83,7 +83,7 @@ They didn’t demolish the cathedral; they outgrew it. Fast-CGI kept the port op
 
 Modern is whatever says hello before you finish saying world.
 
-# Hackers - GDPR, HIPAA, and SOC2 Backing, Do not, like do not, settle for less!
+# Hackers - GDPR, HIPAA, and SOC2 Backing, Do not settle for less!
 
 <img width="559" height="384" alt="image" src="https://github.com/user-attachments/assets/193e9696-8faf-4733-b667-3f49a996423f" />
 
