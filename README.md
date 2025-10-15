@@ -46,7 +46,9 @@ For beneath the cobbles runs WireGuard: a lattice of moonlit tunnels binding dis
 
 Thus the city hums: tiny keeps, mighty beasts, heralded names, courteous sentinels, and silent tunnels—each piece simple, together enchanted—so your work can fly.
 
-# Cargo Cult (but it’s not witchcraft)
+# Cargo Cult (but it’s not witchcraft) - it's RUST
+
+<img width="748" height="512" alt="image" src="https://github.com/user-attachments/assets/69bd057a-aa7e-4077-a0ab-6abf5a4937ff" />
 
 They called it a cult because the newcomers kept smiling at compiler errors. But the truth was simpler: Rust just had rules that worked.
 
@@ -57,5 +59,8 @@ Traits gave interfaces a steel frame. Enums mapped the state space so there were
 The borrow checker was a tough foreman, sure, but fair: “Prove it’s safe, and we go faster.” Prove it, and release mode sings—LLVM polishing the last microns off the parts, async tasks flowing like a well-tuned conveyor.
 
 By dusk, the build light turns green, and everyone nods—not a miracle, just engineering that keeps its promises. Rust doesn’t ask for faith. It hands you a manifest, a checklist, and the keys. Gotta love it.
+
+
+
 
 
