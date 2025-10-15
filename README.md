@@ -83,6 +83,14 @@ They didn’t demolish the cathedral; they outgrew it. Fast-CGI kept the port op
 
 Modern is whatever says hello before you finish saying world.
 
+# Hackers - GDPR, HIPAA, and SOC2 Backing, Do not, like do not, settle for less!
+
+Multitenancy lets one platform serve many customers without feeling “shared.” You get lower cost and faster upgrades, but only if each tenant’s data and performance stay isolated—no noisy neighbors, no cross-tenant peeking. Isolation isn’t a bolt-on; it’s the product.
+
+WASM helps a lot: memory-safe bytecode, default-deny capabilities (no file/network access unless granted), and fast cold starts so you can spin a fresh sandbox per request or per tenant. Same module, same behavior across hosts makes testing and auditing simpler.
+
+But no sandbox is “unbreakable.” Bugs in runtimes, side channels, bad app logic, or over-broad capabilities can still bite. Treat WASM as a strong inner wall, then add defense-in-depth: run as a low-priv user, lock down WASI imports, enforce CPU/mem/time and egress allow-lists, sign modules, and—when assurance matters—wrap it all in containers or microVMs.
+
 
 
 
