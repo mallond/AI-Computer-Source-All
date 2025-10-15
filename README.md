@@ -33,7 +33,7 @@ This repo is about **outcomes**: faster pages, safer runtimes, and **dramaticall
 
 **Ready?** Make something fast, cheap, and undeniable.
 
-# Fly Paper
+# Fly Paper Fly.io
 
 <img width="748" height="512" alt="image" src="https://github.com/user-attachments/assets/818bd168-9c42-4181-8c49-2e4e7d163920" />
 
@@ -46,7 +46,7 @@ For beneath the cobbles runs WireGuard: a lattice of moonlit tunnels binding dis
 
 Thus the city hums: tiny keeps, mighty beasts, heralded names, courteous sentinels, and silent tunnels—each piece simple, together enchanted—so your work can fly.
 
-Cargo Cult (but it’s not witchcraft)
+# Cargo Cult (but it’s not witchcraft)
 
 They called it a cult because the newcomers kept smiling at compiler errors. But the truth was simpler: Rust just had rules that worked.
 
