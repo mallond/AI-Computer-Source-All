@@ -85,6 +85,9 @@ Modern is whatever says hello before you finish saying world.
 
 # Hackers - GDPR, HIPAA, and SOC2 Backing, Do not, like do not, settle for less!
 
+<img width="559" height="384" alt="image" src="https://github.com/user-attachments/assets/193e9696-8faf-4733-b667-3f49a996423f" />
+
+
 Multitenancy lets one platform serve many customers without feeling “shared.” You get lower cost and faster upgrades, but only if each tenant’s data and performance stay isolated—no noisy neighbors, no cross-tenant peeking. Isolation isn’t a bolt-on; it’s the product.
 
 WASM helps a lot: memory-safe bytecode, default-deny capabilities (no file/network access unless granted), and fast cold starts so you can spin a fresh sandbox per request or per tenant. Same module, same behavior across hosts makes testing and auditing simpler.
