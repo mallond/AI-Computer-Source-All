@@ -33,3 +33,14 @@ This repo is about **outcomes**: faster pages, safer runtimes, and **dramaticall
 
 **Ready?** Make something fast, cheap, and undeniable.
 
+# Fly Paper
+
+In the cloudbound city of Fly, apps are born inside Firecracker thimbles—tiny ironclad microVMs lit with dragonfire. Each thimble is its own keep: walls of hardware magic keep travelers separate, so no sorcery bleeds between rooms. Smiths allot a whole hammer to a single thimble—one core per craft—so no forge steals another’s strike. These keeps perch on hulking sky-beasts with 8–32 hearts and 32–256 goblets of memory, and yet each thimble feels alone and safe.
+
+Across the realm, heralds shout one name from every tower at once—BGP Anycast—so calls find the nearest door without thinking. At each door stands a Rust-forged sentinel, the fly-proxy, who greets the caller, checks their sigil, and—if asked—lifts the TLS veil with a courteous nod. Then, with a stamp of its seal, the sentinel opens a secret way.
+
+For beneath the cobbles runs WireGuard: a lattice of moonlit tunnels binding distant cities. If a traveler hails in Dallas but the rightful keep sits in Chicago, the sentinel ushers them below, where the tunnels run swift and near-frictionless, and they arrive without the weariness of long roads.
+
+Thus the city hums: tiny keeps, mighty beasts, heralded names, courteous sentinels, and silent tunnels—each piece simple, together enchanted—so your work can fly.
+
+
