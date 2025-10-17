@@ -1,0 +1,14 @@
+[package]
+name = "your_app"
+version = "0.1.0"
+edition = "2021"
+
+# Tell Cargo that the entry point (with fn main) lives in lib.rs
+[[bin]]
+name = "your_app"
+path = "src/lib.rs"
+
+[profile.release]
+lto = true
+opt-level = "z"
+codegen-units = 1

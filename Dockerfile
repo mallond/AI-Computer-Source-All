@@ -1,4 +1,5 @@
 # ---- Build stage: compile Rust binary ----------------------------------------
+#  RUN ls -al && sleep 5
 FROM rust:1.81-bookworm AS builder
 
 COPY . ./
@@ -10,10 +11,7 @@ RUN ls -al && sleep 1
 
 RUN ./start.sh
 
-RUN ls -al && sleep 5
 RUN mv ./cgi/target/release/cgi /www/cgi
-
-RUN ls -al && sleep 1
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends lighttpd bash ca-certificates
